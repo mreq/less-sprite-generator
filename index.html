@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/stitches-0.5.18-min.css" />
+	</head>
+	<body>
+		<div id="stitches"></div>
+
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/modernizr-2.0.6.min.js"></script>
+		<script src="js/stitches-0.5.18.js"></script>
+		<script>
+			$(document).ready(function(){
+				var $stitches = $("#stitches");
+				Stitches.init($stitches, {jsdir: "js", less: true});
+			});
+		</script>
+	</body>
+</html>
