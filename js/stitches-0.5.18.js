@@ -21,6 +21,7 @@
             "prefix": "",
             "padding": 10,
             "dataURI": false,
+            "stripExtension": true,
             "less": false
         };
 
@@ -285,8 +286,9 @@
                 ];
 
                 $(placedIcons).each(function (idx, icon) {
+                    var name = S.settings.stripExtension ? icon.name.substr(0, icon.name.lastIndexOf('-')) : icon.name;
                     css = css.concat([
-                        "." + prefix + "-" + icon.name + " {",
+                        "." + prefix + name + " {",
                         " .sprite(-" + icon.x + "px, -" + icon.y + "px, " + icon.image.width + "px, " + icon.image.height + "px); ",
                         "}\n"
                     ]);
